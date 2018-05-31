@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default" extends="struts-default" namespace="/">
+        <!-- 用户登陆 -->
+        <action name="users_login" class="com.action.UsersAction" method="login">
+            <result name="success" type="chain">information_findAll</result>
+            <result name="input">/login.jsp</result>
+        </action>
+
+        <action name="user_register" class="com.action.UsersAction" method="register">
+            <result name="success" type="chain">information_findAll</result>
+            <result name="input">/login.jsp</result>
+        </action>
+
+        <!-- 发布信息管理 -->
+        <action name="information_findAll" class="information" method="informationfindall">
+            <result name="success" type="chain">teacher_findAll</result>
+        </action>
+
+        <action name="information_Add" class="information" method="informationadd">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <action name="information_Delete" class="information" method="informationdelete">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <action name="information_FindById" class="information" method="findById">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <action name="information_Update" class="information" method="informationupdate">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <!-- 教师信息管理 -->
+        <action name="teacher_findAll" class="teacher" method="teacherfindall">
+            <result name="success">/teacher.jsp</result>
+        </action>
+
+        <action name="teacher_Add" class="teacher" method="teacheradd">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <action name="teacher_Delete" class="teacher" method="teacherdelete">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <action name="teacher_FindById" class="teacher" method="findById">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <action name="teacher_Update" class="teacher" method="teacherupdate">
+            <result name="success" type="chain">information_findAll</result>
+        </action>
+
+        <!-- 学生信息管理 -->
+        <action name="student_findAll" class="student" method="studentfindall">
+            <result name="success">/student.jsp</result>
+        </action>
+
+        <action name="student_Add" class="student" method="studentadd">
+            <result name="success" type="chain">student_findAll</result>
+        </action>
+
+        <action name="student_Delete" class="student" method="studentdelete">
+            <result name="success" type="chain">student_findAll</result>
+        </action>
+
+        <action name="student_FindById" class="student" method="findById">
+            <result name="success" type="chain">student_findAll</result>
+        </action>
+
+        <action name="student_Update" class="student" method="studentupdate">
+            <result name="success" type="chain">student_findAll</result>
+        </action>
+
+    </package>
+
+</struts>

@@ -1,0 +1,28 @@
+<component name="ProjectDictionaryState">
+  <dictionary name="ZHoodLum">
+    <words>
+      <w>informationadd</w>
+      <w>informationdelete</w>
+      <w>informationfindall</w>
+      <w>informationid</w>
+      <w>informationname</w>
+      <w>listinformation</w>
+      <w>liststudent</w>
+      <w>liststudents</w>
+      <w>listteacher</w>
+      <w>studentadd</w>
+      <w>studentdelete</w>
+      <w>studentfindall</w>
+      <w>studentid</w>
+      <w>studentname</w>
+      <w>studentupdate</w>
+      <w>teacheradd</w>
+      <w>teacherdelete</w>
+      <w>teacherfindall</w>
+      <w>teacherid</w>
+      <w>teachername</w>
+      <w>teacherupdate</w>
+      <w>workage</w>
+    </words>
+  </dictionary>
+</component>

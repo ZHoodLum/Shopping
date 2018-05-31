@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.objectFactory" value="spring" />
+<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<package name="default" extends="struts-default">
+		
+		<action name="login" class="login" method='login'>
+			<result name="input">/login.jsp</result>
+  				<result type="chain" name="success">commoditySelect</result>
+		</action>
+		
+			<action name="registe" class="login" method="registe">
+			<result name="input">/login.jsp</result>
+  				<result name="success">/index.jsp</result>
+		</action>
+		
+			<action name="commoditySelect" class="c" method="selectAll">
+			<result name="success">/commodity.jsp</result>
+		</action>
+		
+			<action name="ctypeSelect" class="ctype" method="selectAll">
+				<result name="success">/ctype.jsp</result>
+			</action>
+			
+			<action name="ctypeAdd" class="ctype" method="ctypeAdd">
+				<result name="success" type="chain">ctypeSelect</result>
+			</action>
+			
+			<action name="CTDelete" class="ctype" method="ctypeDelete">
+				<result name="success" type="chain">ctypeSelect</result>
+			</action>
+			<action name="CTFindById" class="ctype" method="findById">
+				<result name="success">/ctype_update.jsp</result>
+			</action>
+				<action name="ctypeUpdate" class="ctype" method="ctypeUpdate">
+				<result name="success" type="chain">ctypeSelect</result>
+			</action>
+			
+</package>
+</struts>    

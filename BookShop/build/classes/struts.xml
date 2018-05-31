@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.objectFactory" value="spring" />
+
+<package name="default" namespace="/" extends="struts-default">
+<!--  <action name="emp_login" class="login">
+  <result>/index.jsp</result>
+</action>
+-->
+<action name="index" class="index" method="index">
+  <result>/index.jsp</result>
+</action>
+<action name="login" class="login" method="login">
+  <result>/login.jsp</result>
+  <result name="error" type="redirectAction">index</result>
+</action>
+<action name="registe" class="registe" method="registe">
+  <result>/registe.jsp</result>
+  <result type="redirectAction">index</result>
+</action>
+<action name="addCar" class="car" method="addCar">
+  <result type="redirectAction">login</result>
+ </action>
+<action name="delCar" class="car" method="delCar">
+  <result>/car.jsp</result>
+ </action>
+
+</package>
+</struts>    

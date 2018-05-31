@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+	<!-- booktypename进行校验 -->
+	<field name="b.booktypename">
+       <field-validator type="requiredstring">
+		 <param name="trim">true</param>
+             <message>图书类型名不能为空</message>
+      </field-validator>
+
+   
+	   <field-validator type="regex">
+			 <param name="trim">true</param>
+			 <param name="regex">
+			 <![CDATA[[0-9a-zA-Z_]{1,3}$]]>
+			 </param>
+	             <message>图书类型名不符合条件</message>
+	      </field-validator>
+		</field>
+	         	     
+     <!-- b.booktypeid进行校验 -->
+	<field name="b.booktypeid">
+      <field-validator type="stringlength">
+       <param name="trim">true</param>
+       <param name="regex">
+			  <![CDATA[^\d{1,2}$]]>
+			 </param>
+	             <message>图书类型编号不符合条件</message>
+     	 </field-validator>
+   	</field>
+   	
+   
+</validators>

@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+h2{
+	font-size:25px;
+	text-align:center;
+	margin-top:25px;
+}
+.nav{
+	width: 100%;
+	height: 40px;
+	background: rgba(51,55,59,0.8);
+	}
+	.nav_left{
+		float: left;
+		margin-left: 40px;
+		text-align: center;
+		width: 200px;
+		line-height: 40px;
+		font-size: 26px;
+		font-weight: bold;
+		transition: 2s;
+	}
+	.nav_left a{
+		text-decoration: none;
+		color: white;
+	}
+	.nav_left:hover{
+		cursor: pointer;
+		/*光标点击 宽度向右移动50*/
+		transform: translateX(50px);
+	}
+	/*嵌入式框架样式*/
+	.main{
+		left: 0;
+		right: 0;
+		margin:0 auto;
+		width: 70%;
+		height: 500px;
+		top: 18%;	
+		border:solid 0px #FFFFFF;
+		}
+	/*top界面*/
+	.top a{
+		font-size:20px;
+		float: left;
+		margin-left:10px;		
+	}
+	.top a:link{
+ 	text-decoration:none;  /*超链接无下划线*/
+	}
+	.top a:visited{
+	color:#00F;
+ 	text-decoration:none;  /*超链接无下划线*/
+	}
+	.top a:hover{
+	color:#FFFFFF;
+ 	text-decoration:underline;  /*鼠标放上去有下划线*/
+	}
+	.top{
+		margin-top:10px;
+		hieght:500px;
+	}
+
+
+	.botton{
+		margin-top:10px;
+	}
+	.footing p{
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+	
+	
